@@ -1,0 +1,121 @@
+.timeline-card{
+
+    margin-top:35px;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.timeline-card h3{
+
+    color:#1E3A5F;
+
+    margin-bottom:25px;
+
+}
+
+.timeline{
+
+    position:relative;
+
+    margin-left:20px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:15px;
+
+    top:0;
+
+    bottom:0;
+
+    width:4px;
+
+    background:#ddd;
+
+}
+
+.timeline-item{
+
+    display:flex;
+
+    margin-bottom:35px;
+
+    position:relative;
+
+}
+
+.circle{
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:50%;
+
+    background:#2563EB;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    z-index:2;
+
+}
+
+.content{
+
+    margin-left:25px;
+
+}
+
+.content h4{
+
+    margin:0;
+
+    color:#1E3A5F;
+
+}
+
+.content p{
+
+    margin-top:8px;
+
+    color:#666;
+
+}
+
+.timeline-item.approved .circle{
+
+    background:#16A34A;
+
+}
+
+.timeline-item.rejected .circle{
+
+    background:#DC2626;
+
+}
+
+.timeline-item.pending .circle{
+
+    background:#F59E0B;
+
+}

@@ -1,0 +1,377 @@
+/* ===============================
+   USER DASHBOARD
+================================ */
+
+.dashboard-container{
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+    padding:20px;
+
+}
+
+/* ===============================
+   Header
+================================ */
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.dashboard-header h1{
+
+    color:#1E3A5F;
+
+    font-size:36px;
+
+    margin-bottom:8px;
+
+}
+
+.dashboard-header p{
+
+    color:#777;
+
+    font-size:17px;
+
+}
+
+/* ===============================
+   Apply Button
+================================ */
+
+.apply-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.apply-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===============================
+   Dashboard Cards
+================================ */
+
+.dashboard-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-bottom:40px;
+
+}
+
+.card{
+
+    color:white;
+
+    border-radius:16px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.card h2{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+.blue{
+
+    background:#2563eb;
+
+}
+
+.green{
+
+    background:#16a34a;
+
+}
+
+.orange{
+
+    background:#f59e0b;
+
+}
+
+.red{
+
+    background:#dc2626;
+
+}
+
+/* ===============================
+   Profile Box
+================================ */
+
+.profile-box{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    margin-bottom:40px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.profile-box h2{
+
+    color:#1E3A5F;
+
+    margin-bottom:25px;
+
+}
+
+.profile-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.profile-grid div{
+
+    background:#f8fbff;
+
+    padding:18px;
+
+    border-radius:12px;
+
+}
+
+.profile-grid strong{
+
+    display:block;
+
+    color:#2563eb;
+
+    margin-bottom:8px;
+
+}
+
+.profile-grid p{
+
+    color:#555;
+
+    font-size:16px;
+
+}
+
+/* ===============================
+   Loan History
+================================ */
+
+.loan-history{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.loan-history h2{
+
+    color:#1E3A5F;
+
+    margin-bottom:25px;
+
+}
+
+.loan-history table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.loan-history thead{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.loan-history th{
+
+    padding:16px;
+
+    font-size:16px;
+
+}
+
+.loan-history td{
+
+    padding:16px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.loan-history tbody tr:hover{
+
+    background:#f5f9ff;
+
+}
+
+/* ===============================
+   Status Badges
+================================ */
+
+.approved{
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+.pending{
+
+    background:#fef3c7;
+
+    color:#92400e;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+.rejected{
+
+    background:#fee2e2;
+
+    color:#991b1b;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+/* ===============================
+   Responsive
+================================ */
+
+@media(max-width:768px){
+
+.dashboard-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.dashboard-header h1{
+
+    font-size:28px;
+
+}
+
+.apply-btn{
+
+    width:100%;
+
+}
+
+.loan-history{
+
+    overflow-x:auto;
+
+}
+
+.loan-history table{
+
+    min-width:700px;
+
+}
+
+}

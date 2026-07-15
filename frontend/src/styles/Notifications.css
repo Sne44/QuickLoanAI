@@ -1,0 +1,246 @@
+/* ===================================
+   Notifications Page
+=================================== */
+
+.notifications-container{
+
+    width:90%;
+    max-width:900px;
+
+    margin:40px auto;
+
+    padding:30px;
+
+    background:var(--card-bg);
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+/* ============================= */
+
+.notifications-title{
+
+    text-align:center;
+
+    color:var(--text-color);
+
+    margin-bottom:30px;
+
+    font-size:34px;
+
+}
+
+/* ============================= */
+
+.loading{
+
+    text-align:center;
+
+    padding:40px;
+
+    font-size:18px;
+
+    color:#777;
+
+}
+
+/* ============================= */
+
+.empty-box{
+
+    text-align:center;
+
+    padding:40px;
+
+    border-radius:14px;
+
+    background:#F8FAFC;
+
+    color:#64748B;
+
+    font-size:18px;
+
+}
+
+/* ============================= */
+
+.notification-card{
+
+    padding:18px 22px;
+
+    margin-bottom:18px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    border-left:6px solid #2563EB;
+
+    background:#F8FBFF;
+
+}
+
+/* ============================= */
+
+.notification-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+/* ============================= */
+
+.notification-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+}
+
+/* ============================= */
+
+.notification-header h3{
+
+    color:#1E3A5F;
+
+    font-size:19px;
+
+}
+
+/* ============================= */
+
+.notification-card p{
+
+    color:#475569;
+
+    line-height:1.6;
+
+    margin-bottom:12px;
+
+}
+
+/* ============================= */
+
+.notification-card small{
+
+    color:#94A3B8;
+
+}
+
+/* ============================= */
+
+.badge{
+
+    background:#EF4444;
+
+    color:#fff;
+
+    padding:4px 10px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+}
+
+/* ============================= */
+
+.read{
+
+    opacity:.70;
+
+    border-left-color:#CBD5E1;
+
+}
+
+/* ============================= */
+
+.unread{
+
+    background:#EEF6FF;
+
+}
+
+/* ============================= */
+
+.dark-mode .notification-card{
+
+    background:#1E293B;
+
+}
+
+.dark-mode .notification-header h3{
+
+    color:#F8FAFC;
+
+}
+
+.dark-mode .notification-card p{
+
+    color:#CBD5E1;
+
+}
+
+.dark-mode .notifications-container{
+
+    background:#0F172A;
+
+}
+
+.dark-mode .notifications-title{
+
+    color:#F8FAFC;
+
+}
+
+.dark-mode .empty-box{
+
+    background:#1E293B;
+
+    color:#CBD5E1;
+
+}
+
+/* ============================= */
+
+@media(max-width:768px){
+
+.notifications-container{
+
+    width:95%;
+
+    padding:20px;
+
+}
+
+.notifications-title{
+
+    font-size:28px;
+
+}
+
+.notification-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:8px;
+
+}
+
+}

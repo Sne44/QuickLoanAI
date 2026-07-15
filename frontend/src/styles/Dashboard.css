@@ -1,0 +1,55 @@
+.cards-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.card h3 {
+  color: #666;
+}
+
+.card h1 {
+  color: #2563eb;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card h1 {
+  color: #2563eb;
+  font-size: 32px;
+}

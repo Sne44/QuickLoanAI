@@ -1,0 +1,34 @@
+/* ===========================
+   Global App Layout
+=========================== */
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #F8FBF7;
+    color: #333;
+}
+
+/* Main Application Layout */
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Page Content */
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}

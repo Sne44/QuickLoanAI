@@ -1,0 +1,256 @@
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark {
+
+    background: #0F172A;
+    color: #F8FAFC;
+
+    transition: 0.3s;
+}
+
+/* Main Layout */
+
+body.dark .app,
+body.dark .container,
+body.dark .dashboard-container,
+body.dark .profile-container {
+
+    background: #0F172A;
+}
+
+/* ==========================================
+   Cards
+========================================== */
+
+body.dark .glass-card,
+body.dark .profile-card,
+body.dark .profile-details,
+body.dark .summary-card,
+body.dark .loan-card,
+body.dark .dashboard-card,
+body.dark .result,
+body.dark .chart-card,
+body.dark .emi-card,
+body.dark .tips-card,
+body.dark .eligibility-card {
+
+    background: #1E293B;
+
+    color: #F8FAFC;
+
+    border: 1px solid #334155;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+/* ==========================================
+   Form
+========================================== */
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+
+    background: #334155;
+
+    color: white;
+
+    border: 1px solid #475569;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+
+    color: #CBD5E1;
+}
+
+body.dark input:focus,
+body.dark select:focus,
+body.dark textarea:focus {
+
+    border-color: #3B82F6;
+
+    box-shadow: 0 0 10px rgba(59,130,246,.4);
+}
+
+/* ==========================================
+   Tables
+========================================== */
+
+body.dark table {
+
+    background: #1E293B;
+
+    color: white;
+}
+
+body.dark thead {
+
+    background: #2563EB;
+}
+
+body.dark tbody tr {
+
+    border-bottom: 1px solid #334155;
+}
+
+body.dark tbody tr:hover {
+
+    background: #334155;
+}
+
+/* ==========================================
+   Navbar
+========================================== */
+
+body.dark nav,
+body.dark .navbar {
+
+    background: #111827;
+
+    border-bottom: 1px solid #334155;
+}
+
+body.dark .navbar a {
+
+    color: #F8FAFC;
+}
+
+body.dark .navbar a:hover {
+
+    color: #60A5FA;
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+body.dark footer {
+
+    background: #111827;
+
+    color: #CBD5E1;
+}
+
+/* ==========================================
+   Titles
+========================================== */
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4 {
+
+    color: white;
+}
+
+body.dark p,
+body.dark span,
+body.dark label,
+body.dark td {
+
+    color: #E2E8F0;
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+body.dark button {
+
+    background: #2563EB;
+
+    color: white;
+}
+
+body.dark button:hover {
+
+    background: #1D4ED8;
+}
+
+/* ==========================================
+   Status
+========================================== */
+
+body.dark .approved {
+
+    color: #22C55E;
+}
+
+body.dark .pending {
+
+    color: #FACC15;
+}
+
+body.dark .rejected {
+
+    color: #EF4444;
+}
+
+/* ==========================================
+   Loan Timeline
+========================================== */
+
+body.dark .timeline-step {
+
+    background: #334155;
+
+    color: white;
+}
+
+body.dark .timeline-step.active {
+
+    background: #22C55E;
+}
+
+/* ==========================================
+   AI Tips
+========================================== */
+
+body.dark .ai-tip {
+
+    background: #1E3A8A;
+
+    color: white;
+}
+
+/* ==========================================
+   Loan Eligibility Meter
+========================================== */
+
+body.dark .meter {
+
+    background: #334155;
+}
+
+body.dark .meter-fill {
+
+    background: linear-gradient(
+        90deg,
+        #22C55E,
+        #3B82F6
+    );
+}
+
+/* ==========================================
+   Scrollbar
+========================================== */
+
+body.dark ::-webkit-scrollbar {
+
+    width: 8px;
+}
+
+body.dark ::-webkit-scrollbar-track {
+
+    background: #1E293B;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+
+    background: #475569;
+
+    border-radius: 10px;
+}

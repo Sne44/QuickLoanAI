@@ -1,0 +1,302 @@
+/* ==========================
+   GLOBAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(to bottom,#F8FCFA,#F2F8FF);
+    color:#333;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+
+    min-height:220px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    background:linear-gradient(
+        135deg,
+        #EAFBF1,
+        #DDF8E7,
+        #D8EEFF
+    );
+
+}
+
+.hero-overlay{
+
+    width:100%;
+    max-width:1050px;
+    text-align:center;
+
+}
+
+.tag{
+
+    display:inline-block;
+
+    background:#22C55E;
+    color:#fff;
+
+    padding:6px 18px;
+
+    border-radius:30px;
+
+    font-size:13px;
+    font-weight:600;
+
+    margin-bottom:14px;
+
+}
+
+.hero-left h1{
+
+    font-size:40px;
+    line-height:1.15;
+
+    color:#1F3A68;
+
+    margin-bottom:12px;
+
+}
+
+.hero-left p{
+
+    width:65%;
+    margin:auto;
+
+    font-size:15px;
+    color:#555;
+
+    line-height:1.6;
+
+    margin-bottom:20px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.primary-btn{
+
+    background:#22C55E;
+    color:#fff;
+
+    border:none;
+
+    padding:11px 30px;
+
+    border-radius:30px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+    background:#16A34A;
+    transform:translateY(-2px);
+
+}
+
+.secondary-btn{
+
+    background:#fff;
+    color:#2563EB;
+
+    border:none;
+
+    padding:11px 30px;
+
+    border-radius:30px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+    background:#EEF5FF;
+    transform:translateY(-2px);
+
+}
+
+/* ==========================
+   FEATURES
+========================== */
+
+.features{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:30px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+.feature-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:24px 18px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+.icon{
+
+    font-size:38px;
+
+    margin-bottom:12px;
+
+}
+
+.feature-card h3{
+
+    font-size:20px;
+
+    color:#2563EB;
+
+    margin-bottom:10px;
+
+}
+
+.feature-card p{
+
+    color:#666;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+.hero{
+
+    min-height:auto;
+    padding:35px 20px;
+
+}
+
+.hero-left h1{
+
+    font-size:34px;
+
+}
+
+.hero-left p{
+
+    width:100%;
+
+}
+
+.features{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:650px){
+
+.hero{
+
+    padding:30px 15px;
+
+}
+
+.hero-left h1{
+
+    font-size:28px;
+
+}
+
+.hero-left p{
+
+    font-size:14px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:220px;
+
+}
+
+.features{
+
+    grid-template-columns:1fr;
+
+}
+
+}

@@ -1,0 +1,191 @@
+/* ==========================
+   Register Page
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.register-page{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:15px;
+
+    background:linear-gradient(
+        135deg,
+        #F8FBF7,
+        #DDEAD9
+    );
+}
+
+/* ==========================
+   Register Card
+========================== */
+
+.register-card{
+
+    width:100%;
+    max-width:500px;
+
+    background:#fff;
+
+    padding:25px 30px;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(79,124,89,.15);
+}
+
+.register-card h1{
+
+    color:#4F7C59;
+
+    text-align:center;
+
+    font-size:44px;
+
+    margin-bottom:5px;
+}
+
+.register-card p{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:15px;
+
+    margin-bottom:18px;
+}
+
+/* ==========================
+   Inputs
+========================== */
+
+.register-card input,
+.register-card textarea{
+
+    width:100%;
+
+    padding:12px 15px;
+
+    margin-bottom:12px;
+
+    border:1px solid #C7DCC4;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:15px;
+
+    font-family:"Segoe UI",sans-serif;
+
+    transition:.3s;
+}
+
+.register-card textarea{
+
+    height:70px;
+    resize:none;
+}
+
+.register-card input:focus,
+.register-card textarea:focus{
+
+    border-color:#4F7C59;
+
+    box-shadow:0 0 8px rgba(79,124,89,.20);
+}
+
+/* ==========================
+   Button
+========================== */
+
+.register-card button{
+
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#4F7C59;
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin-top:5px;
+}
+
+.register-card button:hover{
+
+    background:#3E6647;
+}
+
+/* ==========================
+   Login Link
+========================== */
+
+.register-card a{
+
+    color:#4F7C59;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+.register-card a:hover{
+
+    text-decoration:underline;
+}
+
+/* ==========================
+   Bottom Text
+========================== */
+
+.register-card .login-text{
+
+    margin-top:15px;
+
+    text-align:center;
+
+    font-size:15px;
+
+    line-height:1.6;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+    .register-card{
+
+        padding:20px;
+    }
+
+    .register-card h1{
+
+        font-size:34px;
+    }
+
+}

@@ -1,0 +1,256 @@
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar {
+
+    height: 75px;
+
+    background: linear-gradient(90deg,#1E3A5F,#2563EB);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 50px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.logo{
+
+    color:white;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+
+}
+
+.logo:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.nav-links button{
+
+    background:white;
+
+    color:#1E3A5F;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.nav-links button:hover{
+
+    background:#2563EB;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   Welcome User
+=========================== */
+
+.welcome-user{
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    margin-right:10px;
+
+}
+
+/* ===========================
+   Active Button
+=========================== */
+
+.active-btn{
+
+    background:#22C55E !important;
+
+    color:white !important;
+
+}
+
+/* ===========================
+   Login Button
+=========================== */
+
+.login-btn{
+
+    background:#2563EB !important;
+
+    color:white !important;
+
+}
+
+.login-btn:hover{
+
+    background:#1D4ED8 !important;
+
+}
+
+/* ===========================
+   Logout Button
+=========================== */
+
+.logout-btn{
+
+    background:#EF4444 !important;
+
+    color:white !important;
+
+}
+
+.logout-btn:hover{
+
+    background:#DC2626 !important;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.navbar{
+
+    flex-direction:column;
+
+    height:auto;
+
+    padding:20px;
+
+}
+
+.logo{
+
+    margin-bottom:15px;
+
+}
+
+.nav-links{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.nav-links button{
+
+    width:140px;
+
+}
+
+.welcome-user{
+
+    width:100%;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+}
+.notification-badge{
+
+    position:absolute;
+
+    top:-6px;
+
+    right:-8px;
+
+    background:#EF4444;
+
+    color:#fff;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+
+.nav-links button{
+
+    position:relative;
+
+}
+
+.theme-btn{
+
+    font-size:20px;
+
+}
