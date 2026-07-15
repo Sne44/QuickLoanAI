@@ -1,12 +1,16 @@
 import "../styles/Navbar.css";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useEffect, useState, useContext } from "react";
+import {
+  useEffect,
+  useState,
+  useContext,
+  useCallback,
+} from "react";
 
 import API from "../services/api";
 import { ThemeContext } from "./ThemeContext";
 
 function Navbar() {
-
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -17,42 +21,27 @@ function Navbar() {
   const token = localStorage.getItem("token");
   const isAdmin = localStorage.getItem("is_admin") === "true";
 
-  const user = JSON.parse(
-    localStorage.getItem("user") || "{}"
-  );
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
 
-  useEffect(() => {
-
-    if (token && !isAdmin) {
-
-      fetchUnreadNotifications();
-
-    }
-
-  }, [token]);
-
-  const fetchUnreadNotifications = async () => {
-
+  const fetchUnreadNotifications = useCallback(async () => {
     try {
-
       const res = await API.get(
         "/loans/notifications/unread-count/"
       );
 
       setUnreadCount(res.data.unread);
-
-    }
-
-    catch (err) {
-
+    } catch (err) {
       console.log(err);
-
     }
+  }, []);
 
-  };
+  useEffect(() => {
+    if (token && !isAdmin) {
+      fetchUnreadNotifications();
+    }
+  }, [token, isAdmin, fetchUnreadNotifications]);
 
   const logout = () => {
-
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     localStorage.removeItem("is_admin");
@@ -60,27 +49,21 @@ function Navbar() {
     delete API.defaults.headers.common["Authorization"];
 
     navigate("/login", { replace: true });
-
   };
 
   const active = (path) =>
     location.pathname === path ? "active-btn" : "";
 
   return (
-
     <nav className="navbar">
-
       <div
         className="logo"
         onClick={() => navigate("/")}
       >
-
         🏦 QuickLoanAI
-
       </div>
 
       <div className="nav-links">
-
         <button
           className={active("/")}
           onClick={() => navigate("/")}
@@ -103,9 +86,7 @@ function Navbar() {
         </button>
 
         {!token && (
-
           <>
-
             <button
               className={active("/login")}
               onClick={() => navigate("/login")}
@@ -119,19 +100,13 @@ function Navbar() {
             >
               Register
             </button>
-
           </>
-
         )}
 
         {token && !isAdmin && (
-
           <>
-
             <span className="welcome-user">
-
               👋 Welcome, {user.username}
-
             </span>
 
             <button
@@ -159,28 +134,20 @@ function Navbar() {
               className={active("/notifications")}
               onClick={() => navigate("/notifications")}
             >
-
               🔔
 
               {unreadCount > 0 && (
-
                 <span className="notification-badge">
-
                   {unreadCount}
-
                 </span>
-
               )}
-
             </button>
 
             <button
               className="theme-btn"
               onClick={toggleTheme}
             >
-
               {darkMode ? "☀️" : "🌙"}
-
             </button>
 
             <button
@@ -189,19 +156,13 @@ function Navbar() {
             >
               Logout
             </button>
-
           </>
-
         )}
 
         {token && isAdmin && (
-
           <>
-
             <span className="welcome-user">
-
               👋 Admin
-
             </span>
 
             <button
@@ -215,9 +176,7 @@ function Navbar() {
               className="theme-btn"
               onClick={toggleTheme}
             >
-
               {darkMode ? "☀️" : "🌙"}
-
             </button>
 
             <button
@@ -226,17 +185,11 @@ function Navbar() {
             >
               Logout
             </button>
-
           </>
-
         )}
-
       </div>
-
     </nav>
-
   );
-
 }
 
 export default Navbar;
